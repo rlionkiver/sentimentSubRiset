@@ -227,7 +227,7 @@ Vektorisasi: TF-IDF unigram + bigram, `min_df=3`, `max_df=0.95`,
 - `f1_macro` — rata-rata F1 per kelas (bobot sama).
 - `balanced_accuracy` — rata-rata recall per kelas.
 - `roc_auc_ovr_weighted` — kemampuan ranking (hanya untuk model dengan
-  `predict_proba`).
+  `predict_proba` yaitu logreg dan naive bayes).
 
 Model terbaik di-tune lebih lanjut dengan `GridSearchCV`
 (grid pada `tfidf__ngram_range`, `tfidf__min_df`, `clf__C`).
@@ -243,7 +243,7 @@ Test set dievaluasi **satu kali saja** dengan:
 
 ### 11. Insight + Simpan Model
 
-- Top 15 kata indikator per kelas (dari koefisien Logistic Regression).
+- Top 15 kata indikator per kelas (dari koefisien SVC).
 - Model disimpan ke `sentiment_model_3class.joblib`.
 
 ### 12. Pertanyaan Bisnis
@@ -261,13 +261,11 @@ monitoring berkelanjutan.
 
 | Model | F1 macro | Std | Balanced Acc | ROC-AUC OvR |
 |---|---|---|---|---|
-| **logreg_balanced** | **0.6603** | 0.0228 | **0.7128** | **0.8799** |
-| linsvc_balanced | 0.6564 | 0.0127 | 0.6558 | – |
-| nb_smote | 0.5657 | 0.0323 | 0.5907 | 0.8703 |
+| logreg_balanced | 0.940720 | 0.008429 |  0.941259 | 0.988418 |
+| **linsvc_balanced** | **0.960222** | **0.004722** | **0.960536** | – |
+| nb_smote | 0.835549 | 0.012688 | 0.836283 | 0.977364 |
 
-**Pemenang**: `logreg_balanced` — menang di semua metrik, stabil antar
-fold (std rendah), dan punya `predict_proba` sehingga bisa dipakai untuk
-threshold tuning di analisis bisnis.
+**Yang memiliki hasil terbaik**: `linsvc_balanced`
 
 ### Artefak
 
