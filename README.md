@@ -8,7 +8,7 @@ sampai model siap pakai dan insight bisnis.
 
 ## Daftar Isi
 
-1. [Tujuan Proyek](#tujuan-proyek)
+1. [Tugas Ratu](#maksud-dan-tujuan-tugas-dari-ratu)
 2. [Dataset](#dataset)
 3. [Struktur Folder](#struktur-folder)
 4. [Cara Menjalankan](#cara-menjalankan)
@@ -21,7 +21,7 @@ sampai model siap pakai dan insight bisnis.
 
 ---
 
-## Tujuan Proyek
+## Maksud dan tujuan tugas dari Ratu
 
 Membangun pipeline analisis sentimen yang dapat:
 
