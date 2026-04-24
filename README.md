@@ -30,8 +30,6 @@ Membangun pipeline analisis sentimen yang dapat:
   bagaimana opini berubah seiring waktu).
 - Menjadi model yang **dapat dipakai ulang** untuk review baru (monitoring
   berkelanjutan).
-- Menjawab pertanyaan bisnis konkret yang berguna untuk tim produk,
-  marketing, dan QA.
 
 ---
 
